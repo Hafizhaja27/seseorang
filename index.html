@@ -1,127 +1,112 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untuk Kamu ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu ❤️</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 
-    body {
-      background: linear-gradient(135deg,#fff0f5,#ffe4ec);
-      overflow-x: hidden;
-    }
+body{
+  background:linear-gradient(135deg,#fff0f5,#ffe4ec);
+  overflow-x:hidden;
+}
 
-    /* LOGIN */
-    #login {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+/* LOGIN */
+#login{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-    .login-box {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+.login-box{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
 
-    input {
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      margin-top: 15px;
-      width: 200px;
-      text-align: center;
-    }
+input{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  margin-top:15px;
+  width:200px;
+  text-align:center;
+}
 
-    button {
-      margin-top: 15px;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 999px;
-      background: #d63384;
-      color: white;
-      cursor: pointer;
-    }
+button{
+  margin-top:15px;
+  padding:12px 20px;
+  border:none;
+  border-radius:999px;
+  background:#d63384;
+  color:white;
+  cursor:pointer;
+}
 
-    /* MAIN */
-    #main {
-      display: none;
-      padding: 20px;
-    }
+/* MAIN */
+#main{display:none;padding:20px;}
 
-    section {
-      margin: 60px auto;
-      max-width: 800px;
-      background: white;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      text-align: center;
-      animation: fade 1s ease;
-    }
+section{
+  margin:60px auto;
+  max-width:800px;
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  text-align:center;
+  animation:fade 1s ease;
+}
 
-    h1,h2 {
-      color: #d63384;
-      margin-bottom: 15px;
-    }
+h1,h2{color:#d63384;margin-bottom:15px;}
+p{line-height:1.7;}
 
-    p {
-      line-height: 1.7;
-    }
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  border-radius:999px;
+  background:#d63384;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border-radius: 999px;
-      background: #d63384;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+.hidden{display:none;}
 
-    .hidden {
-      display: none;
-    }
+.wishlist div{
+  margin:10px 0;
+  background:#fff0f5;
+  padding:10px;
+  border-radius:10px;
+}
 
-    .wishlist div {
-      margin: 10px 0;
-      background: #fff0f5;
-      padding: 10px;
-      border-radius: 10px;
-    }
+/* ANIMASI */
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;}
+}
 
-    @keyframes fade {
-      from {opacity:0; transform:translateY(20px);}
-      to {opacity:1;}
-    }
+/* HEART */
+.heart{
+  position:fixed;
+  bottom:0;
+  animation:up 6s linear infinite;
+  color:#ff4d88;
+}
 
-    /* heart */
-    .heart {
-      position: fixed;
-      bottom: 0;
-      animation: up 6s linear infinite;
-      color: #ff4d88;
-    }
-
-    @keyframes up {
-      to {
-        transform: translateY(-100vh);
-        opacity: 0;
-      }
-    }
-
-  </style>
+@keyframes up{
+  to{
+    transform:translateY(-100vh);
+    opacity:0;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <!-- LOGIN -->
@@ -138,108 +123,114 @@
 <!-- MAIN -->
 <div id="main">
 
-  <section>
-    <h1>Untuk Kamu ❤️</h1>
-    <p>Walaupun kita LDR, kamu tetap jadi rumah yang belum bisa aku datangi.</p>
-    <button class="btn" onclick="playYT()">Putar Lagu Kita 🎵</button>
-    <div id="yt"></div>
-  </section>
+<section>
+  <h1>Untuk Kamu ❤️</h1>
+  <p>Walaupun kita LDR, kamu tetap jadi rumah yang belum bisa aku datangi.</p>
+  <button class="btn" onclick="playYT()">Putar Lagu Kita 🎵</button>
+  <div id="yt"></div>
+</section>
 
-  <section>
-    <h2>Tentang Kamu</h2>
-    <p>Kamu itu sederhana, tapi bikin aku betah.</p>
-  </section>
+<section>
+  <h2>Tentang Kamu</h2>
+  <p>Kamu itu sederhana, tapi selalu bikin aku nyaman.</p>
+</section>
 
-  <section>
-    <h2>Countdown Ketemu</h2>
-    <h1 id="cd">Loading...</h1>
-  </section>
+<section>
+  <h2>Kita Sudah Sejauh Ini ⏳</h2>
+  <h1 id="cd">Loading...</h1>
+  <p>Dari awal kita sampai sekarang 💗</p>
+</section>
 
-  <section>
-    <h2>Surat Buat Kamu</h2>
-    <button class="btn" onclick="buka()">Buka Surat 💌</button>
-    <div id="surat" class="hidden">
-      <p style="margin-top:15px;">
-        Hai sayang...<br><br>
-        Kita mungkin jauh, tapi aku nggak pernah ngerasa sendirian karena ada kamu.<br><br>
-        Aku nggak sabar nunggu hari di mana kita ketemu dan semua ini jadi nyata.<br><br>
-        Aku milih kamu, selalu.
-      </p>
-    </div>
-  </section>
+<section>
+  <h2>Surat Buat Kamu</h2>
+  <button class="btn" onclick="buka()">Buka Surat 💌</button>
+  <div id="surat" class="hidden">
+    <p style="margin-top:15px;">
+      Hai sayang...<br><br>
+      Kita mungkin jauh, tapi aku nggak pernah ngerasa sendiri karena ada kamu.<br><br>
+      Semua waktu yang kita lewatin sejauh ini buktiin kalau kita bisa.<br><br>
+      Aku nggak tahu kapan kita ketemu, tapi aku tahu aku mau tetap sama kamu.<br><br>
+      Aku milih kamu, selalu ❤️
+    </p>
+  </div>
+</section>
 
-  <section>
-    <h2>Wishlist Ketemu</h2>
-    <div class="wishlist">
-      <div>🤍 Pegang tangan kamu</div>
-      <div>🍜 Makan bareng</div>
-      <div>📸 Foto pertama kita</div>
-      <div>🫂 Peluk kamu</div>
-    </div>
-  </section>
+<section>
+  <h2>Wishlist Ketemu</h2>
+  <div class="wishlist">
+    <div>🤍 Pegang tangan kamu</div>
+    <div>🍜 Makan bareng</div>
+    <div>📸 Foto pertama kita</div>
+    <div>🫂 Peluk kamu</div>
+  </div>
+</section>
 
-  <section>
-    <button class="btn" onclick="rahasia()">Klik kalau kangen 💗</button>
-    <p id="r" class="hidden">Aku juga kangen kamu ❤️</p>
-  </section>
+<section>
+  <button class="btn" onclick="rahasia()">Klik kalau kangen 💗</button>
+  <p id="r" class="hidden">Aku juga kangen kamu ❤️</p>
+</section>
 
 </div>
 
 <script>
-  // PASSWORD (GANTI INI)
-  const password = "untukmu";
 
-  function cek() {
-    if(document.getElementById("pass").value === password){
-      document.getElementById("login").style.display = "none";
-      document.getElementById("main").style.display = "block";
-    } else {
-      alert("Salah password 😜");
-    }
+// PASSWORD (GANTI)
+const password = "ayang";
+
+function cek(){
+  if(document.getElementById("pass").value === password){
+    document.getElementById("login").style.display="none";
+    document.getElementById("main").style.display="block";
+  } else {
+    alert("Salah password 😜");
   }
+}
 
-  // YOUTUBE PLAYER
-  function playYT(){
-    document.getElementById("yt").innerHTML = `
-      <iframe width="0" height="0"
-      src="https://www.youtube.com/embed/gsjztA24jrc?autoplay=1&loop=1&playlist=gsjztA24jrc"
-      allow="autoplay"></iframe>
-    `;
-  }
+// YOUTUBE MUSIC
+function playYT(){
+  document.getElementById("yt").innerHTML = `
+    <iframe width="0" height="0"
+    src="https://www.youtube.com/embed/gsjztA24jrc?autoplay=1&loop=1&playlist=gsjztA24jrc"
+    allow="autoplay"></iframe>
+  `;
+}
 
-  // COUNTDOWN (GANTI TANGGAL)
-  const target = new Date(2026, 4, 14, 9, 0, 0).getTime();
+// COUNT UP (ANTI ERROR)
+const start = new Date(2023, 4, 15).getTime(); // GANTI TANGGAL JADIAN
 
-  setInterval(()=>{
-    let now = new Date().getTime();
-    let d = target - now;
+setInterval(()=>{
+  const now = new Date().getTime();
+  const d = now - start;
 
-    let hari = Math.floor(d/(1000*60*60*24));
-    let jam = Math.floor((d%(1000*60*60*24))/(1000*60*60));
-    let menit = Math.floor((d%(1000*60*60))/(1000*60));
-    let detik = Math.floor((d%(1000*60))/1000);
+  let hari = Math.floor(d/(1000*60*60*24));
+  let jam = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+  let menit = Math.floor((d%(1000*60*60))/(1000*60));
+  let detik = Math.floor((d%(1000*60))/1000);
 
-    document.getElementById("cd").innerHTML =
-      hari+"h "+jam+"j "+menit+"m "+detik+"d";
-  },1000);
+  document.getElementById("cd").innerHTML =
+    hari+" hari "+jam+" jam "+menit+" menit "+detik+" detik";
+},1000);
 
-  function buka(){
-    document.getElementById("surat").classList.remove("hidden");
-  }
+// SURAT
+function buka(){
+  document.getElementById("surat").classList.remove("hidden");
+}
 
-  function rahasia(){
-    document.getElementById("r").classList.remove("hidden");
-  }
+// RAHASIA
+function rahasia(){
+  document.getElementById("r").classList.remove("hidden");
+}
 
-  // HEART
-  setInterval(()=>{
-    let h = document.createElement("div");
-    h.className="heart";
-    h.innerHTML="❤";
-    h.style.left=Math.random()*100+"vw";
-    document.body.appendChild(h);
-    setTimeout(()=>h.remove(),6000);
-  },500);
+// HEART
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},500);
+
 </script>
 
 </body>
